@@ -1,0 +1,5 @@
+{
+    "overrides": {
+        "testFiles": ["remotes/mainelecfreakstpbotv2.ts"]
+    }
+}

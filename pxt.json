@@ -35,6 +35,8 @@
         "robots/elecfreakscutebot.ts",
         "robots/elecfreakscutebotpro.ts",
         "robots/elecfreakscutebotprov2.ts",
+        "robots/elecfreakstpbot.ts",
+        "robots/elecfreakstpbotv2.ts",
         "robots/dfrobotmaqueen.ts",
         "robots/dfrobotmaqueenplusv2.ts",
         "robots/kittenbotminilfr.ts",

@@ -13,6 +13,9 @@ cp ./built/mbcodal-binary.hex ./assets/elecfreaks-cutebot-for-microbit-v2.hex
 makecode -c mkc-elecfreakscutebotpro.json -f size
 cp ./built/mbdal-binary.hex ./assets/elecfreaks-cutebotpro-for-microbit-v1.hex
 cp ./built/mbcodal-binary.hex ./assets/elecfreaks-cutebotpro-for-microbit-v2.hex
+makecode -c mkc-elecfreakscutebotprov2.json -f size
+cp ./built/mbdal-binary.hex ./assets/elecfreaks-cutebotprov2-for-microbit-v1.hex
+cp ./built/mbcodal-binary.hex ./assets/elecfreaks-cutebotprov2-for-microbit-v2.hex
 makecode -c mkc-yahboomtinybit.json -f size
 cp ./built/mbdal-binary.hex ./assets/yahboom-tinybit-for-microbit-v1.hex
 cp ./built/mbcodal-binary.hex ./assets/yahboom-tinybit-for-microbit-v2.hex

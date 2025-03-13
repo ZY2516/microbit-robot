@@ -16,9 +16,9 @@ makecode -f size
 # makecode -c mkc-elecfreakscutebotprov2.json -f size
 # cp ./built/mbdal-binary.hex ./assets/elecfreaks-cutebotprov2-for-microbit-v1.hex
 # cp ./built/mbcodal-binary.hex ./assets/elecfreaks-cutebotprov2-for-microbit-v2.hex
-# makecode -c mkc-elecfreakstpbot.json -f size
-# cp ./built/mbdal-binary.hex ./assets/elecfreaks-tpbot-for-microbit-v1.hex
-# cp ./built/mbcodal-binary.hex ./assets/elecfreaks-tpbot-for-microbit-v2.hex
+makecode -c mkc-elecfreakstpbot.json -f size
+cp ./built/mbdal-binary.hex ./assets/elecfreaks-tpbot-for-microbit-v1.hex
+cp ./built/mbcodal-binary.hex ./assets/elecfreaks-tpbot-for-microbit-v2.hex
 makecode -c mkc-elecfreakstpbotv2.json -f size
 cp ./built/mbdal-binary.hex ./assets/elecfreaks-tpbotv2-for-microbit-v1.hex
 cp ./built/mbcodal-binary.hex ./assets/elecfreaks-tpbotv2-for-microbit-v2.hex

@@ -30,7 +30,7 @@ namespace robot {
         }
 
         open(aperture: number): void {
-            i2cCommandSend(0x40, [this.channel, Math.round(Math.map(100 - aperture, 0, 100, 0, 100))]);
+            i2cCommandSend(0x20, [this.channel, Math.round(Math.map(100 - aperture, 0, 100, 0, 100))]);
         }
     }
 

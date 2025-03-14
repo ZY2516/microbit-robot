@@ -3,7 +3,7 @@ namespace robot {
     const i2cAddr = 0x10
 
     function setWheels(leftSpeed: number, rightSpeed: number): void {
-        const buf = pins.createBuffer(4)
+        let buf = pins.createBuffer(4)
         buf[0] = 0x01
         buf[1] = Math.abs(leftSpeed)
         buf[2] = Math.abs(rightSpeed)
@@ -23,7 +23,12 @@ namespace robot {
         }
 
         open(aperture: number): void {
-            // i2cCommandSend(0x40, [this.channel, Math.round(Math.map(100 - aperture, 0, 100, 0, 100))]);
+            let buf = pins.createBuffer(4)
+            buf[0] = 0x10 + this.channel - 1;
+            buf[1] = Math.round(Math.map(100 - aperture, 0, 100, 0, 100));
+            buf[2] = 0;
+            buf[3] = 0;
+            pins.i2cWriteBuffer(i2cAddr, buf);
         }
     }
 
@@ -37,7 +42,7 @@ namespace robot {
                 DigitalPin.P14,
                 false
             )
-            this.maxLineSpeed = 30
+            this.maxLineSpeed = 100
             this.arms = []
             for (let i = 0; i < 4; i++) {
                 this.arms.push(new I2CServoArm(i + 1))

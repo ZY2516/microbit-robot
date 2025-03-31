@@ -72,5 +72,8 @@
         "microbit",
         "calliopemini"
     ],
+    "disablesVariants": [
+        "mbdal"
+    ],
     "preferredEditor": "tsprj"
 }

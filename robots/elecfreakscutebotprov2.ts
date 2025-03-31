@@ -84,21 +84,21 @@ namespace robot {
         }
     }
 
-    // class I2CServoArm implements drivers.Arm {
+    class I2CServoArm implements drivers.Arm {
 
-    //     channel: number
+        channel: number
 
-    //     constructor(channel: number) {
-    //         this.channel = channel;
-    //     }
+        constructor(channel: number) {
+            this.channel = channel;
+        }
 
-    //     start(): void {
-    //     }
+        start(): void {
+        }
 
-    //     open(aperture: number): void {
-    //         i2cCommandSend(0x40, [this.channel, Math.round(Math.map(100 - aperture, 0, 100, 0, 100))]);
-    //     }
-    // }
+        open(aperture: number): void {
+            i2cCommandSend(0x40, [this.channel, Math.round(Math.map(100 - aperture, 0, 100, 0, 100))]);
+        }
+    }
 
     class ElecfreaksCutebotProV2Robot extends robots.Robot {
         constructor() {
@@ -108,9 +108,9 @@ namespace robot {
             this.lineDetectors = new I2CLineDetector()
             this.maxLineSpeed = 30
             this.arms = []
-            // for (let i = 0; i < 4; i++) {
-            //     this.arms.push(new I2CServoArm(i + 1))
-            // }
+            for (let i = 0; i < 4; i++) {
+                this.arms.push(new I2CServoArm(i + 1))
+            }
         }
 
         motorRun(left: number, right: number) {
